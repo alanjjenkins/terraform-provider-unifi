@@ -51,7 +51,8 @@ func New(version string) func() *schema.Provider {
 				"api_url": {
 					Description: "URL of the controller API. Can be specified with the `UNIFI_API` environment variable. " +
 						"You should **NOT** supply the path (`/api`), the SDK will discover the appropriate paths. This is " +
-						"to support UDM Pro style API paths as well as more standard controller paths.",
+						"to support UDM Pro style API paths as well as more standard controller paths. For the UDM api url " +
+						"should be set to `https://<UDM IP>/proxy`",
 
 					Type:        schema.TypeString,
 					Required:    true,
